@@ -133,7 +133,9 @@ else:
     
     # On met tout en minuscules avec .lower() pour éviter les problèmes de majuscules
     sport = input("Quel est ton sport (Football, Natation ou Boxe) : ").lower()
-
+    while sport != "natation" and sport != "boxe" and sport != "football" :
+        print("Nous n'avons pas de programme pour cette discipline choisissez en une autre.")
+        sport = input("Quel est ton sport (Football, Natation ou Boxe) : ").lower()
     # Reprend les fonctions de chaque sport
     if sport == "football":
         programme_football()
@@ -141,5 +143,3 @@ else:
         programme_natation()
     elif sport == "boxe":
         programme_boxe()
-    else:
-        print("Nous n'avons pas de programme pour cette discipline")
